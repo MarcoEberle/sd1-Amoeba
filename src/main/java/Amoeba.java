@@ -9,10 +9,13 @@ public class Amoeba {
      * True for female, false for male.
      */
     private final boolean gender;
+    /**
+     * When an Amoeba is created, its size is 1.
+     */
     private int size = 1;
 
     /**
-     * Constructor to create a new amoeba with a size of one and a gender.
+     * Constructor to create a new Amoeba with a size of one and a gender.
      *
      * @param gender - Either true for female or false for male.
      */
@@ -21,7 +24,7 @@ public class Amoeba {
     }
 
     /**
-     * Getter that returns if the amoeba is male or female.
+     * Getter that returns, if this Amoeba is male or female.
      *
      * @return - Returns either true for female or false for male.
      */
@@ -30,18 +33,18 @@ public class Amoeba {
     }
 
     /**
-     * Getter that returns the size of the amoeba.
+     * Getter that returns the size of this Amoeba.
      *
-     * @return - Returns true if female or false if male.
+     * @return - Returns the size of this Amoeba.
      */
     public int getSize() {
         return size;
     }
 
     /**
-     * Method that feeds the amoeba and increments the size plus 1.
+     * Method that feeds this Amoeba and increments the size by 1.
      *
-     * @return - Returns this amoeba.
+     * @return - Returns this Amoeba.
      */
     public Amoeba feed() {
         size++;
@@ -49,9 +52,9 @@ public class Amoeba {
     }
 
     /**
-     * Method that lets the amoeba hunger and decreases the size of 1.
+     * Method that lets this Amoeba hunger and decreases the size by 1.
      *
-     * @return - Returns this amoeba.
+     * @return - Returns this Amoeba.
      */
     public Amoeba hunger() {
         if (getSize() > 1) {
@@ -61,12 +64,12 @@ public class Amoeba {
     }
 
     /**
-     * Method that splits this amoeba and creates a new one. In the end the new amoeba has the same gender
-     * and both have now the same size added together like this amoeba hat before splitting.
-     * If the size of this amoeba is lower than 5 this method returns null.
-     * Example: This amoeba has a size of 11 before splitting. After it, this amoeba has a size of 5 and new one of 6.
+     * Method that splits this Amoeba and creates a new one. In the end the new Amoeba has the same gender
+     * and both have now the same size added together like this amoeba had before splitting.
+     * If the size of this Amoeba is lower than 5 this method returns null.
+     * Example: This Amoeba has a size of 11 before splitting. After it, this Amoeba has a size of 5 and the new one of 6.
      *
-     * @return - Returns the new amoeba.
+     * @return - Returns the new Amoeba.
      */
     public Amoeba split() {
         final int oldSize = getSize();
@@ -84,12 +87,12 @@ public class Amoeba {
     }
 
     /**
-     * Method that joins with another amoeba to create a new one.
-     * If both amoeba have the same size or the same gender, null gets returned.
-     * The new gender will be the gender of the bigger amoeba.
+     * Method that joins with another Amoeba to create a new one.
+     * If both Amoeba have the same size or the same gender, null gets returned.
+     * The new gender will be the gender of the bigger Amoeba.
      *
-     * @param other - Other amoeba to join.
-     * @return - Returns a new amoeba with the gender of its bigger "parent".
+     * @param other - Other Amoeba to join.
+     * @return - Returns a new Amoeba with the gender of its bigger "parent".
      */
     public Amoeba join(Amoeba other) {
 
@@ -102,11 +105,11 @@ public class Amoeba {
     }
 
     /**
-     * Method that lets fight two amoebas. Only if both are male and one is bigger than the other the fight will begin.
-     * The amoeba with smaller size gets graded down to 1 and bigger amoeba gets loser's size added.
+     * Method that lets two Amoebas fight. Only if both are male and one is bigger than the other the fight will begin.
+     * The Amoeba with smaller size gets graded down to 1 and bigger Amoeba gets loser's size added.
      *
-     * @param enemy - The enemy amoeba to fight with.
-     * @return - Returns this amoeba.
+     * @param enemy - The enemy Amoeba to fight with.
+     * @return - Returns this Amoeba.
      */
     public Amoeba attack(Amoeba enemy) {
 
@@ -131,7 +134,7 @@ public class Amoeba {
     }
 
     /**
-     * Method that returns all information of the amoeba (Gender and size).
+     * Method that returns all information of this Amoeba (Gender and size).
      *
      * @return - Returns a String with the information.
      */
